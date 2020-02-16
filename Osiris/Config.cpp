@@ -944,6 +944,8 @@ void Config::save(size_t id) const noexcept
         aimbotJson["Min damage"] = aimbotConfig.minDamage;
         aimbotJson["Killshot"] = aimbotConfig.killshot;
         aimbotJson["Between shots"] = aimbotConfig.betweenShots;
+	aimbotJson["Standalone RCS"] = aimbotConfig.standaloneRCS;
+	aimbotJson["Standalone RCS Ignore Shots"] = aimbotConfig.shotsFired;
     }
 
     for (size_t i = 0; i < triggerbot.size(); i++) {
