@@ -95,7 +95,7 @@ static bool canScan(Entity* localPlayer, Entity* entity, const Vector& destinati
 void Aimbot::run(UserCmd* cmd) noexcept
 {
     const auto localPlayer = interfaces.entityList->getEntity(interfaces.engine->getLocalPlayer());
-    if (localPlayer->nextAttack() > memory.globalVars->serverTime())
+    if (!localPlayer || localPlayer->nextAttack() > memory.globalVars->serverTime())
         return;
 
     const auto activeWeapon = localPlayer->getActiveWeapon();
@@ -141,8 +141,7 @@ void Aimbot::run(UserCmd* cmd) noexcept
         Vector bestTarget{ };
         auto localPlayerEyePosition = localPlayer->getEyePosition();
 
-        static auto weaponRecoilScale = interfaces.cvar->findVar("weapon_recoil_scale");
-        auto aimPunch = localPlayer->aimPunchAngle() * weaponRecoilScale->getFloat();
+        auto aimPunch = localPlayer->getAimPunch();
         aimPunch.x *= config.aimbot[weaponIndex].recoilControlY;
         aimPunch.y *= config.aimbot[weaponIndex].recoilControlX;
 
