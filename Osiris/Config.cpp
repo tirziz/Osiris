@@ -1635,6 +1635,7 @@ void Config::save(size_t id) const noexcept
         miscJson["Fix tablet signal"] = misc.fixTabletSignal;
         miscJson["Max angle delta"] = misc.maxAngleDelta;
         miscJson["Fake prime"] = misc.fakePrime;
+	miscJson["Draw aimbot FOV"] = misc.drawAimbotFov;
     }
 
     {
