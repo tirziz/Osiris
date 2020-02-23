@@ -246,6 +246,7 @@ public:
         bool revealRanks{ false };
         bool revealMoney{ false };
         bool revealSuspect{ false };
+        bool drawAimbotFov{ false };
         ColorToggle spectatorList;
         ColorToggle watermark;
         bool fixAnimationLOD{ false };
