@@ -831,7 +831,7 @@ void GUI::renderSkinChangerWindow(bool contentOnly) noexcept
     ImGui::PopItemWidth();
 
     auto& selected_entry = config.skinChanger[itemIndex];
-    selected_entry.definition_vector_index = itemIndex;
+    selected_entry.itemIdIndex = itemIndex;
 
     {
         ImGui::SameLine();
