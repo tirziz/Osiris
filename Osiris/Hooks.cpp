@@ -511,7 +511,7 @@ Hooks::Hooks() noexcept
         VirtualProtect(memory.dispatchSound, 4, oldProtection, nullptr);
     }
 
-    interfaces.gameUI->messageBox("This was a triumph!", "Osiris has been successfully loaded.");
+    interfaces.gameUI->messageBox(" Injection Successful!", "Welcome Back\nBuild: " __DATE__ ", " __TIME__ "");
 }
 
 void Hooks::restore() noexcept
