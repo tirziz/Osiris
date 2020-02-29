@@ -1,0 +1,23 @@
+name: C/C++ CI	
+
+on: [pull_request, push]	
+
+jobs:	
+  build:	
+
+    runs-on: windows-latest	
+
+    steps:	
+    - uses: actions/checkout@v2	
+    - name: Setup MSBuild.exe	
+      uses: warrenbuckley/Setup-MSBuild@v1	
+    - name: MSBuild SSE2	
+      working-directory: Osiris	
+      run: msbuild Osiris.vcxproj /p:Configuration=Release /p:VisualStudioVersion=16.0 /v:m /p:OutDir="D:\a\Osiris\Osiris\Osiris\Release\SSE2\"	
+    - name: ls	
+      run: ls	
+    - uses: actions/upload-artifact@v1	
+      with:	
+        name: Release SSE2	
+        path: Osiris/Release/SSE2/Osiris.dll	
+
