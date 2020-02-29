@@ -19,5 +19,5 @@ jobs:
     - uses: actions/upload-artifact@v1	
       with:	
         name: Release SSE2	
-        path: Osiris/Release/SSE2/Osiris.dll	
+        path: Osiris/Release/SSE2/hai.dll	
 
