@@ -157,7 +157,7 @@ public:
 
     constexpr bool isWeapon() noexcept
     {
-        return callVirtualMethod<bool>(this, 165);
+        return callVirtualMethod<bool>(this, 166);
     }
 
     constexpr ClientClass* getClientClass() noexcept
@@ -187,12 +187,12 @@ public:
 
     constexpr WeaponData* getWeaponData() noexcept
     {
-        return callVirtualMethod<WeaponData*>(this, 459);
+        return callVirtualMethod<WeaponData*>(this, 460);
     }
 
     constexpr float getInaccuracy() noexcept
     {
-        return callVirtualMethod<float>(this, 481);
+        return callVirtualMethod<float>(this, 482);
     }
 
     VarMap* getVarMap() noexcept
