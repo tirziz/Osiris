@@ -157,7 +157,7 @@ public:
 
     constexpr bool isWeapon() noexcept
     {
-        return callVirtualMethod<bool>(this, 166);
+        return callVirtualMethod<bool>(this, 165);
     }
 
     constexpr ClientClass* getClientClass() noexcept
